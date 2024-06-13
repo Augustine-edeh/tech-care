@@ -5,7 +5,7 @@ const PatientsList = () => {
   return (
     <section className="bg-unnamed-color-ffffff w-[367px] min-h-[1054px] mt-[14px] rounded-[16px] p-5">
       <div className="flex justify-between">
-        <h3 className="font-manrope font-extrabold text-xl leading-[33px] text-unnamed-color-072635 text-left">
+        <h3 className="font-manrope font-extrabold text-xl leading-[33px] text-unnamed-color-072635 text-left mb-10">
           Patients
         </h3>
         <Image
@@ -16,7 +16,7 @@ const PatientsList = () => {
         />
       </div>
 
-      <ul className="mt-10">
+      <ul>
         <PatientCard />
       </ul>
     </section>
