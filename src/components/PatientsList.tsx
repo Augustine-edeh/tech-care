@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PatientCard from "./PatientCard";
 
 const PatientsList = () => {
   return (
@@ -14,6 +15,10 @@ const PatientsList = () => {
           alt="search"
         />
       </div>
+
+      <ul className="mt-10">
+        <PatientCard />
+      </ul>
     </section>
   );
 };
