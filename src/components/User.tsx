@@ -4,7 +4,7 @@ import MenuIcon from "./MenuIcon";
 
 const User = () => {
   return (
-    <div className="flex bg-blue-300 w-[241p] h-[44px] divide-x-2">
+    <div className="flex w-[241p] h-[44px] divide-x-2">
       <section className="flex pr-3 gap-x-2">
         <Image
           src="/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc@2x.png"
@@ -13,7 +13,7 @@ const User = () => {
           alt="doctor"
         />
 
-        <div className="flex flex-col w-[129] h-[38] bg-red-300">
+        <div className="flex flex-col w-[129] h-[38]">
           <p className="font-manrope font-bold text-sm leading-[19px] text-unnamed-color-072635 text-left">
             Dr. Jose Simmons
           </p>
@@ -23,7 +23,7 @@ const User = () => {
         </div>
       </section>
 
-      <section className="flex gap-x-3 pl-3 bg-red-400">
+      <section className="flex gap-x-3 pl-3">
         <SettingsIcon />
         <MenuIcon />
       </section>

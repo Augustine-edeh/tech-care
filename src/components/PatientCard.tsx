@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const PatientCard = () => {
   return (
-    <div className="flex justify-between w-[317px] h-[48px] bg-orange-100">
+    <div className="flex justify-between w-[317px] h-[48px]">
       <section className="flex gap-x-3">
         <Image
           src="/Layer 8.png"

@@ -4,7 +4,7 @@ import PatientsList from "./PatientsList";
 
 const Main = () => {
   return (
-    <main className="flex justify-between mt-[18px] bg-lime-200">
+    <main className="flex justify-between mt-[18px]">
       <PatientsList />
       <PatientDiagnosisInfo />
       <PatientProfile />
