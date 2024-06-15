@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="nav flex items-center justify-between w-[663px] h-[63px]">
+    <nav className="nav hidden lg:flex items-center justify-between w-[663px] h-[63px]">
       <a
         className="flex justify-center items-center gap-[9px] h-[41px]  focus:bg-unnamed-activestate-bg-1 hover:bg-unnamed-activestate-bg-2 outline-none rounded-[41px]"
         href="#"
