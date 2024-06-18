@@ -9341,8 +9341,8 @@ const PatientsList = () => {
       </div>
 
       <ul className="patient-list flex flex-col gap-y- h-full overflow-y-scroll overflow-x-hidden w-full">
-        {patientsArray.map((patient) => (
-          <li key={patient.name}>
+        {patientsArray.map((patient, index) => (
+          <li key={index}>
             <PatientCard
               profile_picture={patient.profile_picture}
               name={patient.name}
