@@ -77,8 +77,8 @@ const Chart = () => {
   }
 
   // Extracting blood pressure history from diagnosis_history
-  const currentDate = dayjs();
-  const sixMonthsAgo = currentDate.subtract(6, "month");
+  // const currentDate = dayjs();
+  // const sixMonthsAgo = currentDate.subtract(6, "month");
 
   type PatientDataType = {
     name: "Emily Williams";
@@ -183,25 +183,25 @@ const Chart = () => {
         label: "Systolic",
         data: systolicData,
         backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
-        borderWidth: 1,
+        borderColor: "#E66FD2",
+        borderWidth: 2,
         fill: false,
         tension: 0.4, // Increased tension for curved lines
         pointRadius: 5, // Thicker dot points
         pointHoverRadius: 7, // Thicker dot points on hover
-        pointBackgroundColor: "rgba(255, 99, 132, 1)", // Color fill for the dot points
+        pointBackgroundColor: "#E66FD2", // Color fill for the dot points
       },
       {
         label: "Diastolic",
         data: diastolicData,
         backgroundColor: "rgba(54, 162, 235, 0.2)",
-        borderColor: "rgba(54, 162, 235, 1)",
-        borderWidth: 1,
+        borderColor: "#8C6FE6",
+        borderWidth: 2,
         fill: false,
         tension: 0.4, // Increased tension for curved lines
         pointRadius: 5, // Thicker dot points
         pointHoverRadius: 7, // Thicker dot points on hover
-        pointBackgroundColor: "rgba(54, 162, 235, 1)", // Color fill for the dot points
+        pointBackgroundColor: "#8C6FE6", // Color fill for the dot points
       },
     ],
   };
@@ -226,8 +226,59 @@ const Chart = () => {
   };
 
   return (
-    <div className="w-full min-h-[298px] rounded-xl bg-[#F4F0FE]">
-      <Line data={chartData} options={options} />
+    <div className="grid grid-cols-12 gap-x-5 w-full p-[16px] min-h-[298px] rounded-xl bg-[#F4F0FE]">
+      <section className="col-span-12 md:col-span-8 flex flex-col gap-y-5">
+        <div className="flex justify-between items-center pr-10">
+          <h1 className="font-bold text-2xl">Blood Pressure</h1>
+
+          <div className="flex gap-2">
+            <p>Last 6 months</p>
+            <Image
+              src="/expand_more_FILL0_wght300_GRAD0_opsz24.svg"
+              width={10}
+              height={10}
+              alt="month"
+            />
+          </div>
+        </div>
+        <div className="">
+          <Line data={chartData} options={options} />
+        </div>
+      </section>
+
+      <section className="hidden md:col-span-4 md:flex flex-col gap-y-4">
+        <div className="flex flex-col gap-y-2">
+          <div className="flex items-center gap-x-2">
+            <p className="h-4 w-4 rounded-full bg-[#E66FD2]" />
+            <h1>Systolic</h1>
+          </div>
+
+          <p>{`${160}`}</p>
+
+          <div className="flex items-center gap-x-2">
+            <Image src="/ArrowUp.svg" width={10} height={10} alt="indicator" />
+            <p>{`${"Higher than Average"}`}</p>
+          </div>
+        </div>
+        <hr className="h-[1px] bg-unnamed-color-cbc8d4" />
+
+        <div className="flex flex-col gap-y-2">
+          <div className="flex items-center gap-x-2">
+            <p className="h-4 w-4 rounded-full bg-[#8C6FE6]" />
+            <h1>Diastolic</h1>
+          </div>
+          <p>{`${78}`}</p>
+          <div className="flex items-center gap-x-2">
+            <Image
+              src="/ArrowDown.svg"
+              width={10}
+              height={10}
+              alt="indicator"
+            />
+            <p>{`${"Lower than Average"}`}</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
