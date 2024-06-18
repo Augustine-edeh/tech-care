@@ -1,7 +1,11 @@
 import Image from "next/image";
 import PatientCard from "./PatientCard";
 
-const PatientsList = () => {
+type classNameType = {
+  className: string;
+};
+
+const PatientsList = ({ className }: classNameType) => {
   const patientsArray = [
     {
       name: "Jessica Taylor",
@@ -9327,7 +9331,9 @@ const PatientsList = () => {
   ];
 
   return (
-    <section className="bg-unnamed-color-ffffff w-[367px] h-[1076px] h-[full mt-[14px] rounded-[16px] p-5 pr-1 pb-20 overflow-hidde">
+    <section
+      className={`${className} bg-unnamed-color-ffffff w-[367p w- full h-[1076px] h-[full mt-[14px] rounded-[16px] p-5 pr-1 pb-20 overflow-hidde`}
+    >
       <div className="flex justify-between mb-10 mr-5">
         <h3 className="font-manrope font-extrabold text-xl leading-[33px] text-unnamed-color-072635 text-left">
           Patients
@@ -9341,8 +9347,8 @@ const PatientsList = () => {
       </div>
 
       <ul className="patient-list flex flex-col gap-y- h-full overflow-y-scroll overflow-x-hidden w-full">
-        {patientsArray.map((patient) => (
-          <li key={patient.name}>
+        {patientsArray.map((patient, index) => (
+          <li key={index}>
             <PatientCard
               profile_picture={patient.profile_picture}
               name={patient.name}
