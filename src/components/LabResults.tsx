@@ -3,7 +3,7 @@ import React from "react";
 
 const LabResults = () => {
   return (
-    <section className="bg-unnamed-color-ffffff w-[367px] h-[296px] rounded-[16px] p-5 mt-8">
+    <section className="bg-unnamed-color-ffffff w-[367p] h-[296px] rounded-[16px] p-5 mt-8">
       <h3 className="font-manrope font-extrabold text-3xl leading-[33px] text-unnamed-color-072635">
         Lab Results
       </h3>

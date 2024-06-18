@@ -2,66 +2,94 @@ import Image from "next/image";
 
 const PatientVitals = () => {
   return (
-    <section className="flex justify-between mt-5">
-      <div className="w-[228px] h-[242px] p-4 rounded-xl bg-[#E0F3FA]">
+    <section className="flex justify-between">
+      {/* Vital card (respiratory rate) */}
+      <div className="flex flex-col gap-y-4 w-[228px] h-[242px] p-4 rounded-xl bg-[#E0F3FA]">
         <Image
           src="/respiratory rate.svg"
           width={96}
           height={96}
           alt="respiratory rate"
-          className="mb-4"
         />
 
-        <>
+        <div>
           <p className="font-manrope font-medium text-base leading-[22px] text-unnamed-color-072635 text-left capitalize">
             {`Respiratory rate`}
           </p>
           <p className="font-manrope font-extrabold text-[30px] leading-[41px] text-unnamed-color-072635 text-left">
             {`20 bpm`}
           </p>
+        </div>
 
-          <p className="font-manrope font-normal text-sm leading-[19px] text-unnamed-color-072635 text-left mt-[17px]">{`Normal`}</p>
-        </>
+        <div className="flex gap-2">
+          <Image
+            src={`/Arrow${true ? "Down" : "Up"}.svg`}
+            width={10}
+            height={5}
+            alt="indicator"
+          />
+          <p className="font-manrope font-normal text-sm leading-[19px] text-unnamed-color-072635 text-left">{`Normal`}</p>
+        </div>
       </div>
 
-      <div className="w-[228px] h-[242px] p-4 rounded-xl bg-[#FFE6E9]">
+      {/* Vital card (temperature) */}
+      <div className="flex flex-col gap-y-4 w-[228px] h-[242px] p-4 rounded-xl bg-[#FFE6E9]">
         <Image
           src="/temperature.svg"
           width={96}
           height={96}
-          alt="temperature"
-          className="mb-4"
+          alt="respiratory rate"
         />
 
-        <>
+        <div>
           <p className="font-manrope font-medium text-base leading-[22px] text-unnamed-color-072635 text-left capitalize">
-            {`Temperature`}
+            {`Respiratory rate`}
           </p>
           <p className="font-manrope font-extrabold text-[30px] leading-[41px] text-unnamed-color-072635 text-left">
             {`98.6`}&deg; F
           </p>
+        </div>
 
-          <p className="font-manrope font-normal text-sm leading-[19px] text-unnamed-color-072635 text-left mt-[17px]">{`Normal`}</p>
-        </>
+        <div className="flex gap-2">
+          <Image
+            src={`/Arrow${true ? "Down" : "Up"}.svg`}
+            width={10}
+            height={5}
+            alt="indicator"
+          />
+          <p className="font-manrope font-normal text-sm leading-[19px] text-unnamed-color-072635 text-left">{`Normal`}</p>
+        </div>
       </div>
 
-      <div className="w-[228px] h-[242px] p-4 rounded-xl bg-[#FFE6F1]">
+      {/* Vital card (heart rate) */}
+      <div className="flex flex-col gap-y-4 w-[228px] h-[242px] p-4 rounded-xl bg-[#FFE6F1]">
         <Image
           src="/HeartBPM.svg"
           width={96}
           height={96}
-          alt="heart rate"
-          className="mb-4"
+          alt="respiratory rate"
         />
 
-        <>
+        <div>
           <p className="font-manrope font-medium text-base leading-[22px] text-unnamed-color-072635 text-left capitalize">
-            {`heart rate`}
+            {`Respiratory rate`}
           </p>
-          <p className="font-manrope font-extrabold text-[30px] leading-[41px] text-unnamed-color-072635 text-left">{`78 bpm`}</p>
+          <p className="font-manrope font-extrabold text-[30px] leading-[41px] text-unnamed-color-072635 text-left">
+            {`78 bpm`}
+          </p>
+        </div>
 
-          <p className="font-manrope font-normal text-sm leading-[19px] text-unnamed-color-072635 text-left mt-[17px]">{`Normal`}</p>
-        </>
+        <div className="flex gap-2">
+          <Image
+            src={`/Arrow${true ? "Down" : "Up"}.svg`}
+            width={10}
+            height={5}
+            alt="indicator"
+          />
+          <p className="font-manrope font-normal text-sm leading-[19px] text-unnamed-color-072635 text-left">
+            {`Lower than Average`}
+          </p>
+        </div>
       </div>
     </section>
   );

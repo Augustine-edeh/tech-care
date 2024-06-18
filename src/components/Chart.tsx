@@ -72,7 +72,27 @@ const Chart = () => {
 
   if (!patientData) {
     return (
-      <div className="w-full h-[298px] rounded-xl bg-[#F4F0FE]">Loading...</div>
+      // <div className="w-full h-[298px] rounded-xl bg-[#F4F0FE]">Loading...</div>
+      <div className="grid grid-cols-12 gap-[39px] p-[16px] min-h-[298px] rounded-xl bg-[#F4F0FE]">
+        <section className="col-span-12 md:col-span-8 flex flex-col gap-y-5">
+          <div className="flex justify-between items-center">
+            <h1 className="font-bold text-lg text-[#072635]">Blood Pressure</h1>
+
+            <div className="flex gap-2">
+              <p>Last 6 months</p>
+              <Image
+                src="/expand_more_FILL0_wght300_GRAD0_opsz24.svg"
+                width={10}
+                height={10}
+                alt="month"
+              />
+            </div>
+          </div>
+          <div className="grid place-content-center h-full">
+            <p>Loading...</p>
+          </div>
+        </section>
+      </div>
     );
   }
 
@@ -226,10 +246,10 @@ const Chart = () => {
   };
 
   return (
-    <div className="grid grid-cols-12 gap-x-5 w-full p-[16px] min-h-[298px] rounded-xl bg-[#F4F0FE]">
+    <div className="grid grid-cols-12 gap-[39px] p-[16px] min-h-[298px rounded-xl bg-[#F4F0FE]">
       <section className="col-span-12 md:col-span-8 flex flex-col gap-y-5">
-        <div className="flex justify-between items-center pr-10">
-          <h1 className="font-bold text-2xl">Blood Pressure</h1>
+        <div className="flex justify-between items-center">
+          <h1 className="font-bold text-lg text-[#072635]">Blood Pressure</h1>
 
           <div className="flex gap-2">
             <p>Last 6 months</p>
@@ -241,6 +261,7 @@ const Chart = () => {
             />
           </div>
         </div>
+
         <div className="">
           <Line data={chartData} options={options} />
         </div>
