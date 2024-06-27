@@ -1,5 +1,5 @@
 const DiagnosticListTable = () => {
-  return <table>Diagnostic List Table</table>;
+  return <div></div>;
 };
 
 export default DiagnosticListTable;
