@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const PatientVitals = () => {
   return (
-    <section className="flex justify-between">
+    <section className="flex flex-wrap justify-center gap-5 md:justify-between">
       {/* Vital card (respiratory rate) */}
       <div className="flex flex-col gap-y-4 w-[228px] h-[242px] p-4 rounded-xl bg-[#E0F3FA]">
         <Image
