@@ -25,7 +25,7 @@ const PatientProfile = ({ className }: classNameType) => {
           <h3 className="font-manrope font-extrabold text-3xl leading-[33px] text-unnamed-color-072635">{`Jessica Taylor`}</h3>
         </div>
 
-        <ul className="hidden xl:flex flex-col gap-y-6 ">
+        <ul className="hidden lg:flex flex-col gap-y-6 my-[29px]">
           <PatientDOB />
           <PatientGender />
           <PatientContactInfo />
@@ -40,7 +40,7 @@ const PatientProfile = ({ className }: classNameType) => {
         </div>
       </section>
 
-      <LabResults className="hidden xl:block" />
+      <LabResults className="hidden lg:block" />
     </div>
   );
 };

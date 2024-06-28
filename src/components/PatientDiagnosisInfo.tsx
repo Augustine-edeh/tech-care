@@ -31,7 +31,7 @@ const PatientDiagnosisInfo = ({ className }: classNameType) => {
         <DiagnosticListTable />
       </section>
 
-      <LabResults className=" xl:hidden" />
+      <LabResults className="lg:hidden" />
     </div>
   );
 };
