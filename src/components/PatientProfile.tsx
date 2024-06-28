@@ -14,7 +14,7 @@ const PatientProfile = ({ className }: classNameType) => {
   return (
     <div className={`${className} flex flex-col`}>
       <section className="bg-unnamed-color-ffffff min-w-[367px h-[760px rounded-[16px] p-5">
-        <div className="flex flex-col items-center gap-y-6 mt-3 mb-1">
+        <div className="flex flex-col items-center gap-y-6 mt-3 mb- mb-[29px]">
           <Image
             src={`/Layer 2.png`}
             width={200}
@@ -25,7 +25,7 @@ const PatientProfile = ({ className }: classNameType) => {
           <h3 className="font-manrope font-extrabold text-3xl leading-[33px] text-unnamed-color-072635">{`Jessica Taylor`}</h3>
         </div>
 
-        <ul className="flex flex-col gap-y-6 my-[29px]">
+        <ul className="hidden xl:flex flex-col gap-y-6 ">
           <PatientDOB />
           <PatientGender />
           <PatientContactInfo />

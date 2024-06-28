@@ -1,5 +1,6 @@
 import Image from "next/image";
 import PatientCard from "./PatientCard";
+import SearchPatients from "./SearchPatients";
 
 type classNameType = {
   className: string;
@@ -9334,17 +9335,7 @@ const PatientsList = ({ className }: classNameType) => {
     <section
       className={`${className} bg-unnamed-color-ffffff w-[367p w- full h-[1076px h-[full mt-[14px] rounded-[16px] p-5 pr -1 pb -20 overflow-hidde`}
     >
-      <div className="flex justify-between mb-10 mr-5">
-        <h3 className="font-manrope font-extrabold text-xl leading-[33px] text-unnamed-color-072635 text-left">
-          Patients
-        </h3>
-        <Image
-          src="/search_FILL0_wght300_GRAD0_opsz24.svg"
-          width={18}
-          height={18}
-          alt="search"
-        />
-      </div>
+      <SearchPatients className="mb-10 mr-5" />
 
       <ul className="patient-list flex flex-col gap-y- h-fu  overflow-y-scroll h-[1076px] overflow-x-hidden w-full">
         {patientsArray.map((patient, index) => (
