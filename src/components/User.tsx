@@ -5,7 +5,7 @@ import MenuIcon from "./MenuIcon";
 const User = () => {
   return (
     <div className="flex items-center w-[241p] h-[44px] divide-x-2">
-      <section className="flex pr-3 gap-x-2">
+      <section className="flex pr-3 gap-x-2 cursor-pointer">
         <Image
           src="/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc@2x.png"
           width={44}

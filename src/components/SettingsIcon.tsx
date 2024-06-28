@@ -8,7 +8,7 @@ const SettingsIcon = () => {
       width={19}
       height={20}
       alt="settings"
-      className="hidden xl:block"
+      className="hidden xl:block cursor-pointer"
     />
   );
 };

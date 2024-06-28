@@ -7,6 +7,7 @@ const MenuIcon = () => {
       width={4}
       height={18}
       alt="settings"
+      className="cursor-pointer"
     />
   );
 };
