@@ -9332,7 +9332,7 @@ const PatientsList = ({ className }: classNameType) => {
 
   return (
     <section
-      className={`${className} bg-unnamed-color-ffffff w-[367p w- full h-[1076px] h-[full mt-[14px] rounded-[16px] p-5 pr-1 pb-20 overflow-hidde bg-red-300`}
+      className={`${className} bg-unnamed-color-ffffff w-[367p w- full h-[1076px h-[full mt-[14px] rounded-[16px] p-5 pr -1 pb -20 overflow-hidde`}
     >
       <div className="flex justify-between mb-10 mr-5">
         <h3 className="font-manrope font-extrabold text-xl leading-[33px] text-unnamed-color-072635 text-left">
@@ -9346,7 +9346,7 @@ const PatientsList = ({ className }: classNameType) => {
         />
       </div>
 
-      <ul className="patient-list flex flex-col gap-y- h-full overflow-y-scroll overflow-x-hidden w-full">
+      <ul className="patient-list flex flex-col gap-y- h-fu  overflow-y-scroll h-[1076px] overflow-x-hidden w-full">
         {patientsArray.map((patient, index) => (
           <li key={index}>
             <PatientCard
