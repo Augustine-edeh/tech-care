@@ -1,5 +1,6 @@
 import Chart from "./Chart";
 import DiagnosticListTable from "./DiagnosticListTable";
+import LabResults from "./LabResults";
 import PatientVitals from "./PatientVitals";
 
 type classNameType = {
@@ -29,6 +30,8 @@ const PatientDiagnosisInfo = ({ className }: classNameType) => {
 
         <DiagnosticListTable />
       </section>
+
+      <LabResults className=" xl:hidden" />
     </div>
   );
 };

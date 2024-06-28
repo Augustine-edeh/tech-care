@@ -12,7 +12,7 @@ type classNameType = {
 
 const PatientProfile = ({ className }: classNameType) => {
   return (
-    <div className={`${className} flex flex-col`}>
+    <div className={`${className} flex flex-col gap-8`}>
       <section className="bg-unnamed-color-ffffff min-w-[367px h-[760px rounded-[16px] p-5">
         <div className="flex flex-col items-center gap-y-6 mt-3 mb- mb-[29px]">
           <Image
@@ -40,7 +40,7 @@ const PatientProfile = ({ className }: classNameType) => {
         </div>
       </section>
 
-      <LabResults />
+      <LabResults className="hidden xl:block" />
     </div>
   );
 };

@@ -1,9 +1,15 @@
 import Image from "next/image";
 import React from "react";
 
-const LabResults = () => {
+type classNameType = {
+  className: string;
+};
+
+const LabResults = ({ className }: classNameType) => {
   return (
-    <section className="bg-unnamed-color-ffffff w-[367p] h-[296px h-full rounded-[16px] p-5 mt-8 bg-red-300">
+    <section
+      className={`${className} bg-unnamed-color-ffffff w-[367p] h-[296px h-full rounded-[16px] p-5 mt-`}
+    >
       <h3 className="font-manrope font-extrabold text-3xl leading-[33px] text-unnamed-color-072635">
         Lab Results
       </h3>
