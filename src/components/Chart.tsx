@@ -77,26 +77,8 @@ const Chart = () => {
 
   if (!patientData) {
     return (
-      // <div className="w-full h-[298px] rounded-xl bg-[#F4F0FE]">Loading...</div>
-      <div className="grid grid-cols-12 gap-[39px] p-[16px] min-h-[298px] rounded-xl bg-[#F4F0FE]">
-        <section className="col-span-12 md:col-span-8 flex flex-col gap-y-5">
-          <div className="flex justify-between items-center">
-            <h1 className="font-bold text-lg text-[#072635]">Blood Pressure</h1>
-
-            <div className="flex gap-2">
-              <p>Last 6 months</p>
-              <Image
-                src="/expand_more_FILL0_wght300_GRAD0_opsz24.svg"
-                width={10}
-                height={10}
-                alt="month"
-              />
-            </div>
-          </div>
-          <div className="grid place-content-center h-full">
-            <p>Loading...</p>
-          </div>
-        </section>
+      <div className="flex justify-center">
+        <p>Loading...</p>
       </div>
     );
   }
@@ -247,9 +229,9 @@ const Chart = () => {
   };
 
   return (
-    <div className="grid grid-cols-12 justify-center gap-[39px] p-[16px] min-h-[298px rounded-xl bg-[#F4F0FE]">
-      <section className="col-span-12 md:col-span-8 flex flex-col gap-y-5">
-        <div className="flex justify-between items-center">
+    <div className="flex justify-cente">
+      {/* <section className="col-span-12 mdcol-span-8 flex flex-col gap-y-5"> */}
+      {/* <div className="flex justify-between items-center">
           <h1 className="font-bold text-lg text-[#072635]">Blood Pressure</h1>
 
           <div className="flex gap-2">
@@ -261,14 +243,14 @@ const Chart = () => {
               alt="month"
             />
           </div>
-        </div>
+        </div> */}
 
-        <div className="">
-          <Line data={chartData} options={options} />
-        </div>
-      </section>
+      <div className="w-full h-full">
+        <Line data={chartData} options={options} />
+      </div>
+      {/* </section> */}
 
-      <section className="hidden md:col-span-4 md:flex flex-col gap-y-4">
+      {/* <section className="hidden md:col-span-4 md:flex flex-col gap-y-4">
         <div className="flex flex-col gap-y-2">
           <div className="flex items-center gap-x-2">
             <p className="h-4 w-4 rounded-full bg-[#E66FD2]" />
@@ -300,7 +282,7 @@ const Chart = () => {
             <p>{`${"Lower than Average"}`}</p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
