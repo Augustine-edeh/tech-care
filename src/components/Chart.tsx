@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import {
   Chart as ChartJS,
@@ -28,11 +29,13 @@ ChartJS.register(
 
 const Chart = () => {
   // Helper function to encode credentials
-  const encodeCredentials = (username, password) => {
+  const encodeCredentials = (username: string, password: string) => {
     return `Basic ${encode(`${username}:${password}`)}`;
   };
 
-  const [patientData, setPatientData] = useState(null);
+  const [patientData, setPatientData] = useState<
+    PatientDataType | null | undefined
+  >(null);
   const username = "coalition";
   const password = "skills-test";
   const authHeader = encodeCredentials(username, password);
@@ -54,11 +57,13 @@ const Chart = () => {
           throw new Error("Network response was not ok");
         }
 
-        const data = await response.json();
+        const data = (await response.json()) as PatientDataType[]; // Type assertion
+
         console.log(data); // Log the complete data structure
         const jessicaData = data.find(
           (patient) => patient.name === "Jessica Taylor"
         );
+
         console.log("Jessica's Data: ", jessicaData); // Log Jessica's data structure
 
         setPatientData(jessicaData);
@@ -101,50 +106,46 @@ const Chart = () => {
   // const sixMonthsAgo = currentDate.subtract(6, "month");
 
   type PatientDataType = {
-    name: "Emily Williams";
-    gender: "Female";
-    age: 18;
-    profile_picture: "https://fedskillstest.ct.digital/1.png";
-    date_of_birth: "2006-08-19";
-    phone_number: "(711) 984-6696";
-    emergency_contact: "(680) 653-9512";
-    insurance_type: "Premier Auto Corporation";
-    diagnosis_history: [
-      {
-        month: string;
-        year: number;
-        blood_pressure: {
-          systolic: {
-            value: number;
-            levels: string;
-          };
-          diastolic: {
-            value: number;
-            levels: string;
-          };
-        };
-        heart_rate: {
+    name: string;
+    gender: string;
+    age: number;
+    profile_picture: string;
+    date_of_birth: string;
+    phone_number: string;
+    emergency_contact: string;
+    insurance_type: string;
+    diagnosis_history: {
+      month: string;
+      year: number;
+      blood_pressure: {
+        systolic: {
           value: number;
           levels: string;
         };
-        respiratory_rate: {
+        diastolic: {
           value: number;
           levels: string;
         };
-        temperature: {
-          value: number;
-          levels: string;
-        };
-      }
-    ];
-    diagnostic_list: [
-      {
-        name: string;
-        description: string;
-        status: string;
-      }
-    ];
-    lab_results: [string];
+      };
+      heart_rate: {
+        value: number;
+        levels: string;
+      };
+      respiratory_rate: {
+        value: number;
+        levels: string;
+      };
+      temperature: {
+        value: number;
+        levels: string;
+      };
+    }[];
+    diagnostic_list: {
+      name: string;
+      description: string;
+      status: string;
+    }[];
+    lab_results: string[];
   };
 
   type bloodPressureHistory = {
