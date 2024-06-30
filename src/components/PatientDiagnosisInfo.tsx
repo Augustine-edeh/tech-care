@@ -86,7 +86,9 @@ const PatientDiagnosisInfo = ({ className }: classNameType) => {
           </div>
         </div>
 
-        <PatientVitals />
+        <div className="mx-5">
+          <PatientVitals />
+        </div>
       </section>
 
       {/* Diagnostic List card */}
